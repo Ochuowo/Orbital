@@ -3,70 +3,78 @@
 
 **Live Demo:** https://ochuowo.github.io/Orbital/  
 **Meta App ID:** 2096054051003939  
-**Status:** PWA — Installable, Offline-capable, Live Previews
+**Status:** PWA — Installable, Offline, Live Previews, Enterprise Tracks
 
 ---
 
 ### What is Orbital?
-Orbital is a progressive web application game for learning code best practices. Tracks: HTML, CSS, JavaScript, React, Next.js, Python, Ethical Hacking.
+Progressive web app game teaching HTML, CSS, JavaScript, Python, React, Next.js, Ethical Hacking through interactive 3-panel gameplay.
 
-**3-Screen Learning:**
-- **Screen 1 — Live Assembly:** Your final code, green/red glow + persistent error cards + Live Preview tabs
-- **Screen 2 — Code Fragments:** Shuffled lines with 1-liner descriptions + Meta AI Tutor (voice)
-- **Screen 3 — Playground:** Terminal input → Enter to submit
+**Gameplay:**
+- **Assembly:** Your final code top-bottom, green/red glow + persistent error cards (e.g., `<!DOCTYPE>` vs `<!DOCTYPE html>`)
+- **Fragments:** Shuffled lines with 1-liner descriptions + floating Meta AI Tutor (voice with Speak/Stop)
+- **Playground:** Terminal `>` input → Enter to submit
 
-### Expanded Projects (Latest)
+Footer = progress % bar only. Header = name/email/certs only.
 
-**HTML:** Hello World (Novice), Profile Card (Intermediate), Simple Form (Expert)
+### Full Track List (Final)
+
+**HTML:**
+- Portfolio Website (Intermediate) — section, header, articles with images, semantic
+- Inventory Management (Expert) — fieldset, forms, table, functional add/search
 
 **CSS:**
 - Style Hello (Novice)
-- Card Design (Intermediate)  
-- **Calculator UI — Expert** → Simple + Scientific calculator, functional live preview with grid
+- Card Design (Intermediate)
+- Calculator UI (Expert) — grid 4 columns, functional calculator, simple/scientific toggle
 
 **JavaScript:**
 - First Script (Novice)
-- **To-Do List App — Intermediate** → Functional to-do with push/map/render
-- **Weather App — Expert** → Real fetch to wttr.in, async/await, live temp
+- To-Do List (Intermediate) — functional add/render
+- Weather App (Expert) — real fetch wttr.in, async/await
 
 **Python:**
-- Hello Python (Novice)
-- **Chatbot — Intermediate** → random responses, while loop, chat simulation
-- **Trading Platform — Expert** → pandas, yfinance, SMA calculation, BUY/SELL signals, canvas chart
+- **Tic-Tac-Toe (Beginner) — NEW** — print_board, check_winner row/col/diag, playable 3x3 grid
+- Chatbot (Intermediate) — random responses, chat simulation
+- Trading Platform (Expert) — pandas, SMA, BUY/SELL, canvas chart
 
-**Ethical Hacking:** Secure Login Form + defensive security principles
+**React (Unlocks after JS):**
+- Auth System (Beginner) — login/register/reset/confirm email + Welcome page
+- E-Commerce (Intermediate) — products, cart, orders, admin, Stripe/M-Pesa mock
+- Social Media (Expert) — Facebook/Instagram-like feed, likes, comments
 
-Each project has 12-20 fragments, decoys, detailed why+fix error cards (e.g., `<!DOCTYPE>` vs `<!DOCTYPE html>`), and AI hints.
+**Next.js (Unlocks after React):**
+- Fleet Management (Beginner) — vehicles, status, map, getServerSideProps
+- Multi-tenant SaaS (Intermediate) — TenantProvider, billing, feature flags, x-tenant-id
+- ERP System (Expert) — Prisma, modules Inventory/Orders/HR/Finance/Fleet, sync API
+
+**Ethical Hacking:** Secure Login, defensive security
 
 ### Live Previews
-- Calculator calculates, To-Do adds, Weather fetches real data, Chatbot chats, Trading shows SMA chart
-- Code / Live Preview tabs in Screen 1
+All projects render live: calculator calculates, to-do adds, weather fetches, tic-tac-toe playable, chatbot chats, trading shows signals, e-commerce cart, social feed, fleet map, SaaS tenant switch, ERP dashboard.
 
-### Features
-- Facebook & Instagram Login (App ID 2096054051003939)
-- Meta AI Tutor with voice (speechSynthesis + SpeechRecognition)
-- PWA: manifest + service worker + install banner + offline
-- Points, certificates, quizzes
+### Tech
+- Single-file vanilla JS, Canvas starfield, Web Audio, Web Speech API
+- LocalStorage: orbital_user, orbital_points, orbital_certs
+- App ID 2096054051003939 for Facebook Login (hidden in code)
 
-### Deploy to GitHub Pages
+### Deploy
 ```bash
 git clone https://github.com/Ochuowo/Orbital.git
 cd Orbital
-# copy index.html, privacy.html, terms.html, README.md here
-git add .
-git commit -m "Orbital expanded: calculator, to-do, weather, chatbot, trading + live previews - App 2096054051003939"
-git push origin main
+# copy index.html, README.md, privacy.html, terms.html, deploy.sh
+chmod +x deploy.sh
+./deploy.sh
 ```
-Then Settings → Pages → Deploy from main / root → https://ochuowo.github.io/Orbital/
+Live: https://ochuowo.github.io/Orbital/
 
-### Facebook Login Setup
-1. developers.facebook.com → App 2096054051003939
-2. Facebook Login → Settings → Valid OAuth Redirect URIs:
-   - https://ochuowo.github.io/Orbital/
-   - http://localhost:8000/
-3. App Domains: ochuowo.github.io, localhost
-4. Privacy Policy URL: https://ochuowo.github.io/Orbital/privacy.html
-5. Terms URL: https://ochuowo.github.io/Orbital/terms.html
+### Facebook Login Setup (App 2096054051003939)
+Valid OAuth Redirect URIs:
+- https://ochuowo.github.io/Orbital/
+- http://localhost:8000/
+App Domains: ochuowo.github.io, localhost
+Privacy: https://ochuowo.github.io/Orbital/privacy.html
+Terms: https://ochuowo.github.io/Orbital/terms.html
 
 ### License
-MIT — Built by Ochuo Ochuowo
+MIT — Ochuo Ochuowo
